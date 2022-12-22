@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsumeAPITest1
 {
-    public class ProductHistory
+    internal class ProductHistory
     {
         public int id { get; set; }
         public string name { get; set; }
-        public bool approval { get; set; }
         public string borrowPeriodStart { get; set; }
         public string borrowPeriodEnd { get; set; }
+        public int? accountId { get; set; }
     }
 }
