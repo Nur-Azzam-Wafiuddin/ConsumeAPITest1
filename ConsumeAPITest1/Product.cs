@@ -9,7 +9,7 @@ namespace ConsumeAPITest1
     internal class Product
     {
         public int id { get; set; }
-        public string Name { get; set; }
+        public string name { get; set; }
         public bool isAvailable { get; set; }
     }
 }

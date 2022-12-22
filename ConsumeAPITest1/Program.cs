@@ -5,15 +5,22 @@ using System.Net;
 using System.Text.Json.Nodes;
 using System.Collections.Generic;
 using System.Text.Json;
-
+/*
 SendProduct jsonData = new SendProduct();
-jsonData.Name = "Bob";
+jsonData.name = "Bob";
 jsonData.isAvailable = true;
+*/
+SendAccount sendAccount = new SendAccount();
+sendAccount.name = "gifto";
+sendAccount.username = "giftor";
+sendAccount.password = "giftor";
+sendAccount.productHistory = new List<ProductHistory>() { };
 
-var jsonDataReady = JsonConvert.SerializeObject(jsonData);
+//var jsonDataReady = JsonConvert.SerializeObject(jsonData);
+var sendAccountJson = JsonConvert.SerializeObject(sendAccount);
 
-var getId = 1;
-var postUrl = "http://localhost:7100/api/Product/" + getId;
+//var getId = 1;
+var postUrl = "http://localhost:7100/api/Account/";
 var client = new RestClient();
 var request = new RestRequest()
 {
@@ -22,9 +29,9 @@ var request = new RestRequest()
 
 request.AddHeader("Content-Type", "application/json");
 request.AddHeader("Accept", "application/xml");
-request.AddJsonBody(jsonDataReady);
+request.AddJsonBody(sendAccountJson);
 
-var response = client.Put(request);
+var response = client.Post(request);
 /*
 var response = client.Get(request);
 

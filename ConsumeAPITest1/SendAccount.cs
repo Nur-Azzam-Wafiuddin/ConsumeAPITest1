@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsumeAPITest1
 {
-    internal class SendProduct
+    internal class SendAccount
     {
         public string name { get; set; }
-        public bool isAvailable { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public List<ProductHistory> productHistory { get; set; }
     }
 }

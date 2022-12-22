@@ -9,7 +9,9 @@ namespace ConsumeAPITest1
     public class ProductHistory
     {
         public int id { get; set; }
-        public string Name { get; set; }
-        public string borrowState { get; set; }
+        public string name { get; set; }
+        public bool approval { get; set; }
+        public string borrowPeriodStart { get; set; }
+        public string borrowPeriodEnd { get; set; }
     }
 }
